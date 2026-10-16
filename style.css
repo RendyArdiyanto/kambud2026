@@ -61,7 +61,7 @@ body {
 .hero-content h2 { font-size: 1.6rem; color: #add8e6; margin-bottom: 25px; }
 
 .highlight {
-    border-bottom: 8px solid #00ffff;
+    border-bottom: none;
     padding-bottom: 5px;
     display: inline-block;
     color: #00ffff;
