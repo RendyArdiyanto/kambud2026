@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jelajahi keunikan budaya, destinasi wisata, dan kuliner Pacitan melalui situs KAPPAMA Expo untuk Festival Kampung Budaya 2025.">
+    <title>Pacitan: Gerbang Budaya | KAPPAMA Expo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="hero-section" id="hero">
+        <div class="video-background">
+            <!-- Video YouTube dimasukkan oleh script.js (lihat CONFIG.heroVideo) -->
+            <div id="heroVideo"></div>
+            <div class="overlay"></div>
+        </div>
+
+        <div class="hero-content">
+            <p class="pre-title">BEST OF PACITAN CULTURE &amp; DESTINATIONS</p>
+            <h1><span class="highlight">KAPPAMA:</span>
+                <br>Keluarga Pelajar Pacitan di Malang<br></h1>
+            <h2> Menjaga warisan budaya pacitan</h2>
+            <p class="subtitle">Persembahan kami untuk Festival Kampung Budaya Universitas Brawijaya 2026. Jelajahi keunikan budaya, destinasi, dan kuliner Pacitan.</p>
+            <div class="cta-group">
+                <button class="cta-primary" id="ctaExplore">Jelajahi Sekarang</button>
+            </div>
+        </div>
+
+        <a class="scroll-down-arrow" href="#kebudayaan" aria-label="Scroll ke bagian kebudayaan">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </header>
+
+    <main class="container">
+        <section id="kebudayaan" class="category-section">
+            <h2 class="section-title">🎭 Kebudayaan dan Kesenian</h2>
+            <div class="horizontal-scroll-container" data-group="kebudayaan"></div>
+        </section>
+
+        <hr>
+
+        <section id="wisata" class="category-section">
+            <h2 class="section-title">🏖️ Destinasi Wisata Pacitan</h2>
+            <div class="horizontal-scroll-container" data-group="wisata"></div>
+        </section>
+
+        <hr>
+
+        <section id="makanan" class="category-section">
+            <h2 class="section-title">🍽️ Makanan Khas Pacitan</h2>
+            <div class="horizontal-scroll-container" data-group="makanan"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 KAPPAMA - Keluarga Pelajar Pacitan di Malang. Lomba Kampung Budaya Universitas Brawijaya.</p>
+    </footer>
+
+    <div id="infoModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close-button" id="closeButton" aria-label="Tutup">&times;</button>
+            <h3 id="modalTitle"></h3>
+
+            <div class="video-container" id="modalVideoBox">
+                <div id="modalVideoEmbed"></div>
+            </div>
+
+            <p id="modalText"></p>
+
+            <div class="modal-footer">
+                <button id="modalBackButton" class="cta-primary">
+                    <i class="fas fa-chevron-left"></i> Kembali ke Daftar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
