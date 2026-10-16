@@ -10,6 +10,20 @@ body {
     overflow-x: hidden;
 }
 
+/* Latar gradasi biru laut untuk SELURUH halaman (tetap saat di-scroll) */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 75% 15%, rgba(11, 90, 140, .75) 0%, transparent 55%),
+        radial-gradient(circle at 15% 85%, rgba(0, 128, 255, .28) 0%, transparent 50%),
+        radial-gradient(circle at 85% 90%, rgba(0, 255, 255, .12) 0%, transparent 45%),
+        #0a0a0a;
+}
+
 .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
 
 /* ---------- HERO ---------- */
@@ -24,21 +38,33 @@ body {
     position: relative;
     overflow: hidden;
     color: #fff;
-    background: radial-gradient(circle at 70% 30%, #0b3a5c 0%, #0a0a0a 70%);
 }
 
 .video-background { position: absolute; inset: 0; overflow: hidden; z-index: 0; }
 
-/* iframe YouTube menutupi seluruh hero (rasio 16:9) */
-.yt-bg {
+/* Video hero (iframe YouTube / tag video) menutupi seluruh area; muncul setelah mulai diputar */
+.video-background iframe,
+.video-background video {
     position: absolute;
     top: 50%; left: 50%;
-    width: 100vw; height: 56.25vw;
-    min-height: 100%; min-width: 177.78vh;
-    transform: translate(-50%, -50%);
     border: 0;
     pointer-events: none;
+    opacity: 0;
+    transition: opacity 1s ease;
 }
+.video-background video {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+/* YouTube: diperbesar 1,35x agar judul & logo terpotong keluar layar */
+.video-background iframe {
+    width: 100vw; height: 56.25vw;
+    min-height: 100%; min-width: 177.78vh;
+    transform: translate(-50%, -50%) scale(1.35);
+}
+.hero-section.playing .video-background iframe,
+.hero-section.playing .video-background video { opacity: 1; }
 
 .overlay {
     position: absolute; inset: 0; z-index: 1;
@@ -61,7 +87,7 @@ body {
 .hero-content h2 { font-size: 1.6rem; color: #add8e6; margin-bottom: 25px; }
 
 .highlight {
-    border-bottom: none;
+    border-bottom: 8px solid #00ffff;
     padding-bottom: 5px;
     display: inline-block;
     color: #00ffff;
@@ -94,6 +120,21 @@ body {
     animation: bounce 2s infinite ease-in-out;
 }
 .scroll-down-arrow:hover { color: #0080ff; }
+
+/* Tombol suara hero */
+.sound-toggle {
+    position: absolute; bottom: 30px; right: 5vw; z-index: 10;
+    width: 52px; height: 52px; border-radius: 50%;
+    background: rgba(10,10,10,.55);
+    border: 1px solid rgba(0,255,255,.5);
+    color: #00ffff; font-size: 1.2rem; cursor: pointer;
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    transition: transform .3s ease, background .3s ease;
+}
+.sound-toggle[hidden] { display: none; }
+.sound-toggle:hover { transform: scale(1.1); background: rgba(0,255,255,.2); }
+.sound-toggle[aria-pressed="true"] { background: linear-gradient(135deg, #00ffff, #0080ff); color: #0a0a0a; }
+.sound-toggle:focus-visible { outline: 2px solid #00ffff; outline-offset: 3px; }
 
 /* ---------- SECTION & KARTU ---------- */
 .category-section { padding: 100px 0 60px; }
@@ -233,6 +274,7 @@ footer {
     .subtitle { font-size: 1rem; margin-bottom: 30px; }
     .cta-primary { padding: 12px 25px; font-size: 1rem; }
     .scroll-down-arrow { bottom: 20px; font-size: 2rem; }
+    .sound-toggle { bottom: 20px; right: 4vw; width: 46px; height: 46px; }
     .category-section { padding: 60px 0 40px; }
     .section-title { font-size: 2rem; text-align: center; }
     .horizontal-scroll-container { gap: 20px; }
