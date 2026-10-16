@@ -90,7 +90,7 @@ body::before {
     border-bottom: none;
     padding-bottom: 5px;
     display: inline-block;
-    color: #00ffff;
+    color: #f49600;
 }
 
 .subtitle { font-size: 1.15rem; color: #ccc; margin-bottom: 50px; }
