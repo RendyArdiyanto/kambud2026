@@ -21,32 +21,38 @@ const CONFIG = {
 
 const ITEMS = {
     kebudayaan: [
-        {
-            judul: "Upacara Adat Ceprotan", emoji: "🥭", kategori: "Kebudayaan",
+       {
+            judul: "Culture of Pacitan", emoji: "", kategori: "Kebudayaan",
+            foto: "https://i.ytimg.com/vi/-hwKuS-COgU/maxresdefault.jpg",    // <- GANTI: link foto Ceprotan
+            video: "https://youtu.be/-hwKuS-COgU?si=JDKTqqpd2uMJdbj3",
+            teks: "Pacitan memiliki lanskap alam yang khas, mulai dari deretan pantai berpasir putih, ombak Samudra Hindia yang kuat, hingga gua-gua karst yang menyimpan stalaktit dan stalagmit indah, menjadikannya daerah yang kaya pesona geologis. Di sisi lain, masyarakat Pacitan tetap menjaga tradisi budaya seperti kesenian wayang kulit, upacara adat, serta kerajinan lokal yang diwariskan turun-temurun, mencerminkan hubungan harmonis antara manusia dan alam yang menjadi ciri khas wilayah ini."
+        }, 
+       {
+            judul: "Upacara Adat Ceprotan", emoji: "", kategori: "Kebudayaan",
             foto: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4duDFFdxQa5z7y35i_cf0yGDbC3qinCGPvZdn_-dnAwdoO8E88NTQF_w&s=10",    // <- GANTI: link foto Ceprotan
             video: "https://youtu.be/XIfM9jrJBYo",
             teks: "Asal usul Ceprotan berawal dari legenda Dewi Sekartaji dan Ki Godek di Desa Sekar, Pacitan, di mana sisa air kelapa yang dituang Dewi Sekartaji menjadi sumber mata air desa tersebut. Untuk mengenang peristiwa ini dan sebagai bentuk bersih desa, masyarakat mengadakan tradisi saling lempar kelapa muda antara dua kubu pemuda, yang diyakini mendatangkan kelimpahan rezeki bagi yang terkena lemparan."
         },
         {
-            judul: "Kethek Ogleng", emoji: "🐒", kategori: "Kesenian",
+            judul: "Kethek Ogleng", emoji: "", kategori: "Kesenian",
             foto: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZhbKTpRmXO7WeUPN4DCSDGq9s_gkfllp1v6HQQhLvPL6TJKMp0QBoIQ8m&s=10",    // <- GANTI: link foto Kethek Ogleng
             video: "https://youtu.be/CDcUzYRLhes",
             teks: "Kesenian tari topeng yang menggambarkan tingkah laku seekor kera. Populer sebagai hiburan rakyat dan pelestarian cerita rakyat Panji Semirang."
         },
         {
-            judul: "Ronthek", emoji: "🎶", kategori: "Kesenian",
+            judul: "Ronthek", emoji: "", kategori: "Kesenian",
             foto: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGWlwbLGgFE8buMEteWk0hkKKQAdHHAtlxHzOJgtmD3ISctvihiMJMsrU&s=10",    // <- GANTI: link foto Ronthek
             video: "https://youtu.be/QC56sKLvVaU?si=OOQ7OfaQ9q7x8nmR&t=346",   // <- GANTI: link YouTube Ronthek
             teks: "Musik tradisional yang mirip kentongan. Dimainkan secara berkelompok dengan alat perkusi bambu/kayu. Biasanya dimainkan saat membangunkan sahur."
         },
         {
-            judul: "Wayang Beber", emoji: "📜", kategori: "Kesenian",
+            judul: "Wayang Beber", emoji: "", kategori: "Kesenian",
             foto: "https://yogyaku.com/wp-content/uploads/2024/09/Wayang-beber-dengan-cara-pertunjukannya-yang-unik.jpg",    // <- GANTI: link foto Wayang Beber
             video: "https://youtu.be/2EKH7JDvuKY?si=H5EfZa6ZFNF19ciu&t=64",   // <- GANTI: link YouTube Wayang Beber
             teks: "Kesenian wayang tertua yang digulung (beber) dan dibentangkan. Warisan budaya bernilai sejarah tinggi."
         },
         {
-            judul: "Bathik Pace", emoji: "🖋️", kategori: "Kerajinan",
+            judul: "Bathik Pace", emoji: "", kategori: "Kerajinan",
             foto: "https://awsimages.detik.net.id/community/media/visual/2018/10/02/e6c136ac-6e37-410b-9657-fdde813265c0.png?w=600&q=90",    // <- GANTI: link foto Bathik Pace
             video: "https://youtu.be/dvTb9VpqcFs?si=bWPUDTzFACmYQPJf&t=23",   // <- GANTI: link YouTube Bathik Pace
             teks: "Batik khas Pacitan yang motifnya banyak terinspirasi dari alam dan biota laut. Buah Pace sering menjadi inspirasi motif batik."
@@ -55,19 +61,19 @@ const ITEMS = {
 
     wisata: [
         {
-            judul: "Museum dan Galeri Seni SBY ANI", emoji: "🖼️", kategori: "Wisata Sejarah",
+            judul: "Museum dan Galeri Seni SBY ANI", emoji: "", kategori: "Wisata Sejarah",
             foto: "https://awsimages.detik.net.id/community/media/visual/2023/08/28/museum-dan-galeri-sbyani-di-pacitan_169.jpeg?w=1200",    // <- GANTI: link foto Museum SBY ANI
             video: "https://youtu.be/ce4D4XLv-T8",
             teks: "Museum dan Galeri Seni SBY-Ani di Pacitan didedikasikan untuk mengenang perjalanan hidup Presiden ke-6 Republik Indonesia, Susilo Bambang Yudhoyono (SBY), dan mendiang Ibu Ani Yudhoyono. Museum ini diresmikan pada 17 Agustus 2023 dan memamerkan foto, video, benda pribadi, serta memorabilia yang menceritakan kisah hidup SBY, dari masa kecil, karier militer, hingga masa jabatannya sebagai presiden. Selain koleksi sejarah, tersedia galeri seni yang menampilkan karya lukis SBY dan seniman lainnya, sehingga museum ini menjadi pusat edukasi dan apresiasi budaya bagi masyarakat."
         },
         {
-            judul: "Goa Gong", emoji: "💎", kategori: "Wisata Alam",
+            judul: "Goa Gong", emoji: "", kategori: "Wisata Alam",
             foto: "https://sidita.disbudpar.jatimprov.go.id/storage/foto-dtw/d35ca_1666861588.jpg",    // <- GANTI: link foto Goa Gong
             video: "https://youtu.be/rzVfEhLwG20?si=OgZnLPcxAZeZhWhp&t=5",   // <- GANTI: link YouTube Goa Gong
             teks: "Dikenal sebagai salah satu gua terindah se-Asia Tenggara. Keindahan stalaktit dan stalagmitnya yang berkilauan menjadikannya daya tarik utama geowisata."
         },
         {
-            judul: "Pantai Klayar", emoji: "🏖️", kategori: "Wisata Alam",
+            judul: "Pantai Klayar", emoji: "", kategori: "Wisata Alam",
             foto: "https://andarabus.com/wp-content/uploads/2022/08/Screenshot-2022-08-29-132514.jpg",    // <- GANTI: link foto Pantai Klayar
             video: "https://youtu.be/5PD0Xxr3_V4?si=LCkS7a3ne4h_3oOt&t=31",   // <- GANTI: link YouTube Pantai Klayar
             teks: "Pantai ikonik Pacitan dengan batu karang berbentuk Sphinx dan 'Seruling Laut'. Panorama pasir putihnya sangat memukau."
