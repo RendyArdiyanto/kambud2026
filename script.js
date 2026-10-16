@@ -16,7 +16,7 @@ const CONFIG = {
     // Video latar di halaman utama (YouTube). Contoh: "https://youtu.be/XXXXXXXXXXX"
     heroVideo: "https://youtu.be/-hwKuS-COgU",   // <- GANTI jika perlu
     // Gambar cadangan hero saat video belum dimuat (boleh dikosongkan)
-    heroPoster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyPlKA7NujEcLSb7G274EQhlkCOzk6KTsdkXmRV5_U5p56gWM-uoEqGkY&s=10"                                // <- GANTI: link gambar hero
+    heroPoster: ""                                // <- GANTI: link gambar hero
 };
 
 const ITEMS = {
